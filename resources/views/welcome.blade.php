@@ -21,7 +21,7 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul id="navScrollspy"class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a href="#top" class="nav-link">Sign In</a>
+            <a href="/login" class="nav-link">Sign In</a>
           </li>
         </ul>
       </div>
