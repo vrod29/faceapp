@@ -15,27 +15,27 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/register', function () {
+Route::get('register', function () {
     return view('register');
 });
 
-Route::get('/login', function () {
+Route::get('login', function () {
     return view('login');
 });
 
-Route::get('/uploads', function () {
+Route::get('uploads', function () {
     return view('uploads');
 });
 
-Route::get('/settings', function () {
+Route::get('settings', function () {
     return view('settings');
 });
 
-Route::get('/results', function () {
+Route::get('results', function () {
     return view('results');
 });
 
-Route::get('/directory', function () {
+Route::get('directory', function () {
     return view('directory');
 });
 
