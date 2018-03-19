@@ -8,10 +8,14 @@ class FaceController extends Controller
 {
   protected function getFaceAppResults (Request $request)
   {
+
+      if (!empty($request->imageUrl)) {
+          $imageUrl = $response->imageUrl;
+      }
     $curl = curl_init();
 
     curl_setopt_array($curl, array(
-     CURLOPT_URL => "https://api-us.faceplusplus.com/facepp/v3/detect?api_key=IJXARUZHq4AQOIH5r8F5FknxneD-qNS2&api_secret=AdwvUK2Whfwe1PXuKj8oVseZF5JUBdrU&image_url=https://img.huffingtonpost.com/asset/59355ce52300003b00348d3f.jpeg?ops=scalefit_720_noupscale&return_attributes=gender,age,smiling,headpose,facequality,blur,eyestatus,emotion,ethnicity,beauty,mouthstatus,eyegaze,skinstatus",
+     CURLOPT_URL => "https://api-us.faceplusplus.com/facepp/v3/detect?api_key=IJXARUZHq4AQOIH5r8F5FknxneD-qNS2&api_secret=AdwvUK2Whfwe1PXuKj8oVseZF5JUBdrU&image_url=$imageUrla&return_attributes=gender,age,smiling,headpose,facequality,blur,eyestatus,emotion,ethnicity,beauty,mouthstatus,eyegaze,skinstatus",
      CURLOPT_RETURNTRANSFER => true,
      CURLOPT_ENCODING => "",
      CURLOPT_MAXREDIRS => 10,
@@ -33,6 +37,6 @@ class FaceController extends Controller
       'faceData' => $response
     ];
 
-    return view('index')->with($data);
+    return view('results')->with($data);
   }
 }
