@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class FaceController extends Controller
 {
-  protected function getFaceAppResults ()
+  protected function getFaceAppResults (Request $request)
   {
     $curl = curl_init();
 
@@ -29,10 +29,10 @@ class FaceController extends Controller
 
     curl_close($curl);
 
-    if ($err) {
-     echo "cURL Error #:" . $err;
-    } else {
-     echo $response;
-    }
+    $data = [
+      'faceData' => $response
+    ];
+
+    return view('index')->with($data);
   }
 }
