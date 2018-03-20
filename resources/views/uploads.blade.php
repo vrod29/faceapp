@@ -21,10 +21,15 @@
             <div class="card-body">
               <h5 class="card-title text-center">Results</h5>
               <hr>
+              @if (!empty($faceData))
+
+
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item"><strong>Age:</strong></li>
-                    <li class="list-group-item"><strong>Gender:</strong></li>
+                    <?php dump($faceData); ?>
+                    <li class="list-group-item"><strong>Age:{{ $faceData['faces']['0']['attributes']['age']['value'] }}</strong></li>
+                    <li class="list-group-item"><strong>Gender:{{ $faceData['faces']['0']['attributes']['gender']['value'] }}</strong></li>
                     <li class="list-group-item"><strong>Smiling</strong></li>
+                     @endif
                 </ul>
             </div>
           </div>

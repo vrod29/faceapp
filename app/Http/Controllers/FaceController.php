@@ -44,6 +44,6 @@ class FaceController extends Controller
     ];
 
     Log::info('i got this far');
-    return view('results')->with($data);
+    return view('uploads')->with($data);
   }
 }
