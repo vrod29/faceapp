@@ -1,13 +1,11 @@
 @extends('welcome')
 
 @section('content')
-  <div class="container top_section">
+  <div class="container top_section mt-3">
     <div class="row">
-      <div class="col-6 image_container text-center">
-            <div class="image_upload pt-3">
-              <div class="">
-                <img src="http://placehold.it/478X478" alt="">
-              </div>
+      <div class="col-xs-12 col-lg-6 image_container text-center mb-3">
+            <div class="pt-3">
+                <img class="image_upload" src="http://placehold.it/478X478" alt="">
             </div>
             <form class="" action="getFaceAppResults" method="post">
                 @csrf
@@ -19,7 +17,7 @@
                 </div>
             </form>
         </div>
-        <div class="col-6">
+        <div class="col-xs-12 col-lg-6">
           <div class="card">
             <div class="card-body">
               <h5 class="card-title text-center">Results</h5>

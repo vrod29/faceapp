@@ -1,5 +1,4 @@
 .jumbotron {
-  margin-top: 40px;
   background-image: url(/images/background.jpg);
   background-size: cover;
   background-position: center;
@@ -10,15 +9,13 @@
     margin-top: 200px;
 }
 
-.top_section {
-  margin-top: 100px;
-}
-
-.upload_button {
-}
-
 .image_container {
   background-color: #eeeeee;
+}
+
+.image_upload {
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .list-group-item {
