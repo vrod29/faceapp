@@ -1,3 +1,7 @@
-.uploadrows{
-    margin-top: 200px;
+.jumbotron {
+  margin-top: 40px;
+  background-image: url(/images/background.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 680px;
 }

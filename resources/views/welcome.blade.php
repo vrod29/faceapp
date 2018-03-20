@@ -21,25 +21,7 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul id="navScrollspy"class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a href="#top" class="nav-link">To the top</a>
-          </li>
-          <li class="nav-item">
-            <a href="#description" class="nav-link">Description</a>
-          </li>
-          <li class="nav-item">
-            <a href="#trailer" class="nav-link">Trailer</a>
-          </li>
-          <li class="nav-item">
-            <a href="#showcase" class="nav-link">Showcase</a>
-          </li>
-          <li class="nav-item">
-            <a href="#features" class="nav-link">Features</a>
-          </li>
-          <li class="nav-item">
-            <a href="#pricing" class="nav-link">Pricing</a>
-          </li>
-          <li class="nav-item">
-            <a href="#Reviews" class="nav-link">Reviews</a>
+            <a href="/login" class="nav-link">Sign In</a>
           </li>
         </ul>
       </div>
