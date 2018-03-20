@@ -3,19 +3,20 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Log;
 
 class FaceController extends Controller
 {
-  protected function getFaceAppResults (Request $request)
+  public function getFaceAppResults (Request $request)
   {
 
       if (!empty($request->imageUrl)) {
-          $imageUrl = $response->imageUrl;
+          $imageUrl = $request->imageUrl;
       }
     $curl = curl_init();
 
     curl_setopt_array($curl, array(
-     CURLOPT_URL => "https://api-us.faceplusplus.com/facepp/v3/detect?api_key=IJXARUZHq4AQOIH5r8F5FknxneD-qNS2&api_secret=AdwvUK2Whfwe1PXuKj8oVseZF5JUBdrU&image_url=$imageUrla&return_attributes=gender,age,smiling,headpose,facequality,blur,eyestatus,emotion,ethnicity,beauty,mouthstatus,eyegaze,skinstatus",
+     CURLOPT_URL => "https://api-us.faceplusplus.com/facepp/v3/detect?api_key=IJXARUZHq4AQOIH5r8F5FknxneD-qNS2&api_secret=AdwvUK2Whfwe1PXuKj8oVseZF5JUBdrU&image_url=$imageUrl&return_attributes=gender,age,smiling,headpose,facequality,blur,eyestatus,emotion,ethnicity,beauty,mouthstatus,eyegaze,skinstatus",
      CURLOPT_RETURNTRANSFER => true,
      CURLOPT_ENCODING => "",
      CURLOPT_MAXREDIRS => 10,
@@ -33,10 +34,16 @@ class FaceController extends Controller
 
     curl_close($curl);
 
+    Log::info('i am here');
+    Log::info($response);
+
+    $response = json_decode($response, true);
+
     $data = [
       'faceData' => $response
     ];
 
+    Log::info('i got this far');
     return view('results')->with($data);
   }
 }

@@ -1,6 +1,8 @@
+@extends('welcome')
+
 @section('content')
-<div class="row">
-    <div class="col">
+<div class="uploadrows row">
+    <div class="col-4">
         <form class="" action="getFaceAppResults" method="post">
             @csrf
             <div class="input-group mb-3">
