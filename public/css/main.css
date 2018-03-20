@@ -9,3 +9,18 @@
 .uploadrows{
     margin-top: 200px;
 }
+
+.top_section {
+  margin-top: 100px;
+}
+
+.upload_button {
+}
+
+.image_container {
+  background-color: #eeeeee;
+}
+
+.list-group-item {
+  border: 0;
+}
