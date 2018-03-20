@@ -12,7 +12,7 @@
     <title>@yield('title')</title>
   </head>
   <body data-spy="scroll" data-target="#navScrollspy">
-    <nav class="navbar bg-dark navbar-dark navbar-expand-sm fixed-top">
+    <nav class="navbar bg-dark navbar-dark navbar-expand-sm">
       <div class="container">
       <a href="#" class="navbar-brand">FaceApp</a>
       <button type="button" class="navbar-toggler navbar-toggler-right" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,6 +30,15 @@
     <div class="container-fluid px-0">
         @yield('content')
     </div>
+
+    {{-- Footer --}}
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; FaceApp 2018</p>
+
+      </div>
+
+    </footer>
 
 
     <!-- Optional JavaScript -->
