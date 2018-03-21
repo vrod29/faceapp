@@ -7,7 +7,7 @@
 @section('content')
     <header id="home-section">
       <div class="dark-overlay">
-        <div id="top" class="jumbotron">
+        <div id="top" class="jumbotron mb-0">
           <div class="container">
             <h1 class="display-1">Face App</h1>
             <p class="display-4">WHO ARE YOU?</p>
