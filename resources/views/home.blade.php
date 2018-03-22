@@ -1,4 +1,4 @@
-@extends('welcome')
+@extends('logged_in')
 
 @section('content')
 <div class="container">

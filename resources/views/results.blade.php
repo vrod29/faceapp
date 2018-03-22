@@ -1,4 +1,5 @@
-@extends('welcome')
+@extends('logged_in')
+
 @section('content')
     <div class="row">
         <div class="col-4 mt-5 pt-5">
