@@ -25,9 +25,7 @@ Route::get('/uploads', function () {
     return view('uploads');
 });
 
-Route::get('settings', function () {
-    return view('settings');
-});
+Route::get('settings', 'UserController@userSettings');
 
 Route::get('/results', function () {
     return view('results');
@@ -36,6 +34,8 @@ Route::get('/results', function () {
 Route::get('directory', function () {
     return view('directory');
 });
+
+Route::post('/updateSettings', 'UserController@updateSettings');
 
 Auth::routes();
 
