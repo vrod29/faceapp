@@ -1,4 +1,4 @@
-@extends('loggedin') @section('content')
+@extends('logged_in') @section('content')
 <div class="row">
     <div class="col">
         <form>
@@ -11,7 +11,7 @@
                 <label for="exampleInputPassword1">Change Password</label>
                 <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
             </div>
-            
+
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
