@@ -11,6 +11,7 @@ class FaceController extends Controller
   {
 
       if (!empty($request->imageUrl)) {
+          
           $imageUrl = $request->imageUrl;
       }
     $curl = curl_init();
@@ -34,16 +35,14 @@ class FaceController extends Controller
 
     curl_close($curl);
 
-    Log::info('i am here');
-    Log::info($response);
-
     $response = json_decode($response, true);
 
     $data = [
-      'faceData' => $response
+      'faceData' => $response,
+      'img' => $imageUrl
     ];
 
-    Log::info('i got this far');
     return view('uploads')->with($data);
+
   }
 }
