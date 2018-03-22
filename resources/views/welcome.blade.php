@@ -11,6 +11,7 @@
 
     <title>@yield('title')</title>
   </head>
+  
   <body data-spy="scroll" data-target="#navScrollspy">
     <nav class="navbar bg-dark navbar-dark navbar-expand-sm">
       <div class="container">
