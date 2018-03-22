@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use App\UserImage;
 use Auth;
 
 class UserController extends Controller
@@ -23,4 +24,13 @@ class UserController extends Controller
         $userSettings->save();
         return redirect('settings');
     }
+
+    // public function uploadImage()
+    // {
+    //   $newUpload = new UserImage;
+    //   $newUpload->user_id = Auth::id();
+    //   $newUpload->image_url = $request->image_url;
+    //   $newUpload->json = $request->json;
+    //   $newUpload->save();
+    // }
 }

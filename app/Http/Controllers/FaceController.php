@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
+use App\UserImage;
+use Auth;
 use Log;
 
 class FaceController extends Controller
@@ -11,7 +14,7 @@ class FaceController extends Controller
   {
 
       if (!empty($request->imageUrl)) {
-          
+
           $imageUrl = $request->imageUrl;
       }
     $curl = curl_init();
@@ -35,19 +38,21 @@ class FaceController extends Controller
 
     curl_close($curl);
 
-    $response = json_decode($response, true);
+    $faceData = json_decode($response, true);
 
     $data = [
-      'faceData' => $response,
+      'faceData' => $faceData,
       'img' => $imageUrl
     ];
 
-    return view('uploads')->with($data);
-
     $newUpload = new UserImage;
     $newUpload->user_id = Auth::id();
-    $newUpload->image_url = $request->image_url;
-    $newUpload->json = $request->json;
+    $newUpload->image_url = $request->imageUrl;
+    $newUpload->json = $response;
     $newUpload->save();
+
+    return view('uploads')->with($data);
+
+
   }
 }
