@@ -27,8 +27,16 @@
                     <?php dump($faceData); ?>
                     <li class="list-group-item"><strong>Age: {{ $faceData['faces']['0']['attributes']['age']['value'] }}</strong></li>
                     <li class="list-group-item"><strong>Gender: {{ $faceData['faces']['0']['attributes']['gender']['value'] }}</strong></li>
-                    <li class="list-group-item"><strong>Smiling</strong></li>
+                    <li class="list-group-item"><strong>Sadness percentage: {{ $faceData['faces']['0']['attributes']['emotion']['sadness'] }}</strong></li>
+                    <li class="list-group-item"><strong>Neutral emotion percentage: {{ $faceData['faces']['0']['attributes']['emotion']['neutral'] }}</strong></li>
+                    <li class="list-group-item"><strong>Disgust percentage: {{ $faceData['faces']['0']['attributes']['emotion']['disgust'] }}</strong></li>
+                    <li class="list-group-item"><strong>Anger percentage: {{ $faceData['faces']['0']['attributes']['emotion']['anger'] }}</strong></li>
+                    <li class="list-group-item"><strong>Surprise percentage: {{ $faceData['faces']['0']['attributes']['emotion']['surprise'] }}</strong></li>
+                    <li class="list-group-item"><strong>Fear percentage: {{ $faceData['faces']['0']['attributes']['emotion']['fear'] }}</strong></li>
+                    <li class="list-group-item"><strong>Happiness percentage: {{ $faceData['faces']['0']['attributes']['emotion']['happiness'] }}</strong></li>
                      @endif
+
+
                 </ul>
             </div>
           </div>
