@@ -5,14 +5,14 @@
     <div class="row">
       <div class="col-xs-12 col-lg-6 image_container text-center mb-3">
             <div class="pt-3">
-                <img class="image_upload" src="http://placehold.it/478X478" alt="">
+                    <img id="singleImageUpload" class="image_upload" src="{{ $img or 'http://placehold.it/478X478' }}" alt="">
             </div>
             <form class="" action="getFaceAppResults" method="post">
                 @csrf
                 <div class="input-group py-3 px-4 upload_button align-center">
-                  <input name="imageUrl" type="text" class="form-control" placeholder="Image URL" aria-label=""  aria-describedby="basic-addon1">
+                  <input id="urlInput" name="imageUrl" type="text" class="form-control" placeholder="Image URL" aria-label=""  aria-describedby="basic-addon1">
                   <div class="input-group-append">
-                    <button class="btn btn-primary" type="submit">Go</button>
+                    <button id="submitButton" class="btn btn-primary" type="submit">Go</button>
                   </div>
                 </div>
             </form>
@@ -37,4 +37,12 @@
     </div>
 
 
+@endsection
+
+@section('javascript')
+    <script type="text/javascript">
+        $('#submitButton').click(function(){
+            $("#singleImageUpload").attr("src", $("urlInput").val)
+        })
+    </script>
 @endsection
