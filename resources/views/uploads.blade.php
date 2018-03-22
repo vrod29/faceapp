@@ -48,9 +48,5 @@
 @endsection
 
 @section('javascript')
-    <script type="text/javascript">
-        $('#submitButton').click(function(){
-            $("#singleImageUpload").attr("src", $("urlInput").val)
-        })
-    </script>
+    
 @endsection
