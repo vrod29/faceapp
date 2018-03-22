@@ -11,19 +11,38 @@
 
     <title>@yield('title')</title>
   </head>
-  
+
   <body data-spy="scroll" data-target="#navScrollspy">
     <nav class="navbar bg-dark navbar-dark navbar-expand-sm">
       <div class="container">
-      <a href="#" class="navbar-brand">FaceApp</a>
+      <a href="/" class="navbar-brand">FaceApp</a>
       <button type="button" class="navbar-toggler navbar-toggler-right" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul id="navScrollspy"class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a href="/login" class="nav-link">Sign In</a>
-          </li>
+        <ul id="navScrollspy"class="navbar-nav ml-auto">          
+          @auth
+            <li class="nav-item">
+              <a href="/uploads" class="nav-link">Uploads</a>
+            </li>
+            <li class="nav-item">
+              <a href="/directory" class="nav-link">Directory</a>
+            </li>
+            <li class="nav-item">
+              <a href="/settings" class="nav-link">Account</a>
+            </li>
+            <li class="nav-item">
+              <a href="{{ url('/logout') }}" class="nav-link">Logout</a>
+            </li>
+          @endauth
+          @guest
+            <li class="nav-item">
+              <a href="{{ url('/login') }}" class="nav-link">Sign In</a>
+            </li>
+            <li class="nav-item">
+              <a href="{{ url('/register') }}" class="nav-link">Register</a>
+            </li>
+          @endguest
         </ul>
       </div>
       </div>
