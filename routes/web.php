@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', 'HomeController@index')->name('index');
 
 Route::get('register', function () {
     return view('register');
@@ -45,4 +43,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::post('/getFaceAppResults', 'FaceController@getFaceAppResults');
 
-Route::get('/logout', 'HomeController@logout');
+Route::get('logout', 'HomeController@logout');
