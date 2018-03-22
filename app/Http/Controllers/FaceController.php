@@ -45,5 +45,11 @@ class FaceController extends Controller
 
     Log::info('i got this far');
     return view('uploads')->with($data);
+
+    $newUpload = new UserImage;
+    $newUpload->user_id = Auth::id();
+    $newUpload->image_url = $request->image_url;
+    $newUpload->json = $request->json;
+    $newUpload->save();
   }
 }
