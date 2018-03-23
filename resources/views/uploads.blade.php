@@ -25,7 +25,7 @@
 
               @if (!empty($faceData['faces']))
                 <ul class="list-group list-group-flush">
-                    <?php dump($faceData); ?>
+                    
                     <li class="list-group-item"><strong>Age: {{ $faceData['faces']['0']['attributes']['age']['value'] }}</strong></li>
                     <li class="list-group-item"><strong>Gender: {{ $faceData['faces']['0']['attributes']['gender']['value'] }}</strong></li>
                     <li class="list-group-item"><strong>Sadness percentage: {{ $faceData['faces']['0']['attributes']['emotion']['sadness'] }}</strong></li>
