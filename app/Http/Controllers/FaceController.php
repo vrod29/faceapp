@@ -45,14 +45,18 @@ class FaceController extends Controller
       'img' => $imageUrl
     ];
 
-    $newUpload = new UserImage;
-    $newUpload->user_id = Auth::id();
-    $newUpload->image_url = $request->imageUrl;
-    $newUpload->json = $response;
-    $newUpload->save();
+    if (Auth::check()){
+      $newUpload = new UserImage;
+      $newUpload->user_id = Auth::id();
+      $newUpload->image_url = $request->imageUrl;
+      $newUpload->json = $response;
+      $newUpload->save();
 
-    return view('uploads')->with($data);
+      return view('uploads')->with($data);
+    }
 
-
+    else {
+        return redirect('login');
+    }
   }
 }
