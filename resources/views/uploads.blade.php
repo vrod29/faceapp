@@ -28,6 +28,7 @@
                     
                     <li class="list-group-item"><strong>Age: {{ $faceData['faces']['0']['attributes']['age']['value'] }}</strong></li>
                     <li class="list-group-item"><strong>Gender: {{ $faceData['faces']['0']['attributes']['gender']['value'] }}</strong></li>
+                    <li class="list-group-item"><strong>Ethnicity: {{ $faceData['faces']['0']['attributes']['ethnicity']['value'] }}</strong></li>
                     <li class="list-group-item"><strong>Sadness percentage: {{ $faceData['faces']['0']['attributes']['emotion']['sadness'] }}</strong></li>
                     <li class="list-group-item"><strong>Neutral emotion percentage: {{ $faceData['faces']['0']['attributes']['emotion']['neutral'] }}</strong></li>
                     <li class="list-group-item"><strong>Disgust percentage: {{ $faceData['faces']['0']['attributes']['emotion']['disgust'] }}</strong></li>

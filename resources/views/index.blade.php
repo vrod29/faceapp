@@ -13,7 +13,7 @@
               <div class="col-8 col-lg-6 col-xs-12 justify-content-left">
                 <div class="blog-card spring-fever">
                   <div class="title-content mt-5">
-                    <h1 class="display-1 text-white">Face App</h1>
+                    <h1 class="display-1">Face App</h1>
                     <div class="intro">
                       <p class="display-4 text-white">WHO ARE YOU?</p>
                     </div>
