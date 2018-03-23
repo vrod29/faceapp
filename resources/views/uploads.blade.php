@@ -22,7 +22,8 @@
             <div class="card-body">
               <h5 class="card-title text-center">Results</h5>
               <hr>
-              @if (!empty($faceData))
+
+              @if (!empty($faceData['faces']))
                 <ul class="list-group list-group-flush">
                     <?php dump($faceData); ?>
                     <li class="list-group-item"><strong>Age: {{ $faceData['faces']['0']['attributes']['age']['value'] }}</strong></li>
@@ -34,7 +35,11 @@
                     <li class="list-group-item"><strong>Surprise percentage: {{ $faceData['faces']['0']['attributes']['emotion']['surprise'] }}</strong></li>
                     <li class="list-group-item"><strong>Fear percentage: {{ $faceData['faces']['0']['attributes']['emotion']['fear'] }}</strong></li>
                     <li class="list-group-item"><strong>Happiness percentage: {{ $faceData['faces']['0']['attributes']['emotion']['happiness'] }}</strong></li>
-                     @endif
+
+                    @else
+                        <h5>Invalid Url</h5>
+                        <h5>Please Enter a URL leading to an image of a face.</h5>
+                @endif
 
 
                 </ul>
