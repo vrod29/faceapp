@@ -31,9 +31,8 @@ Route::get('/results', function () {
     return view('results');
 });
 
-Route::get('directory', function () {
-    return view('directory');
-});
+Route::get('/directory', 'UserController@fillDirectory');
+
 
 Route::post('/updateSettings', 'UserController@updateSettings');
 

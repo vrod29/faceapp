@@ -33,4 +33,16 @@ class UserController extends Controller
     //   $newUpload->json = $request->json;
     //   $newUpload->save();
     // }
+
+    public function fillDirectory(){
+        $userSettings = User::find(Auth::id());
+        $userImages = UserImage::where('user_id', '=', Auth::id())->get();
+        $data = [
+            'userSettings' => $userSettings,
+            'userImages' => $userImages
+        ];
+        return view('directory')->with($data);
+    }
+
+
 }
