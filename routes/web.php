@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'HomeController@index')->name('index');
+Route::get('/', 'HomeController@homepage');
 
 Route::get('register', function () {
     return view('register');
@@ -37,8 +37,6 @@ Route::get('/directory', 'UserController@fillDirectory');
 Route::post('/updateSettings', 'UserController@updateSettings');
 
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
 
 Route::post('/getFaceAppResults', 'FaceController@getFaceAppResults');
 
