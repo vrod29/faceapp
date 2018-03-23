@@ -37,7 +37,6 @@
                     <li class="list-group-item"><strong>Happiness percentage: {{ $faceData['faces']['0']['attributes']['emotion']['happiness'] }}</strong></li>
 
                     @else
-                        <h5>Invalid Url</h5>
                         <h5>Please Enter a URL leading to an image of a face.</h5>
                 @endif
 
