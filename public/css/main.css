@@ -31,6 +31,12 @@
 .test{
   min-height: 100vh;
 }
+
+#submitSettings{
+    float: right;
+}
+
+
 /* #footer {
     width:100%;
     height: 5px;
