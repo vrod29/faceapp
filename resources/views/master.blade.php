@@ -20,7 +20,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul id="navScrollspy"class="navbar-nav ml-auto">          
+        <ul id="navScrollspy"class="navbar-nav ml-auto">
           @auth
             <li class="nav-item">
               <a href="/uploads" class="nav-link">Uploads</a>
@@ -47,18 +47,18 @@
       </div>
       </div>
     </nav>
-    <div class="container-fluid px-0">
+    <div class="container-fluid px-0 test">
         @yield('content')
     </div>
 
     {{-- Footer --}}
-    <footer class="py-5 bg-dark">
-      <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; FaceApp 2018</p>
-
-      </div>
-
-    </footer>
+    <div id="footer">
+      <footer class="py-5 bg-dark">
+        <div class="container">
+          <p class="m-0 text-center text-white">Copyright &copy; FaceApp 2018</p>
+        </div>
+      </footer>
+    </div>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 @yield('javascript')
 
